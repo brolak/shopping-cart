@@ -6,6 +6,11 @@
   <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
   <title>Shopping Cart!</title>
+  <script id="cart-template" type="text/x-handlebars-template">
+      {{#each cart}}
+      <p>{{Name}}-{{Price}}</p>
+      {{/each}}
+  </script>
 </head>
 <body>
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -40,7 +45,9 @@
   <div class="container">
     <div class="shopping-cart">
       <p class="cart-title">Items in Cart</p>
-      <div class="cart-list"></div>
+      <div class="cart-list">
+      <!--insert cart items here -->
+      </div>
       <p>Total: $<span class="total">0</span></p>
       <button type="button" class="btn clear-cart">Clear Cart</button>
     </div>
@@ -147,9 +154,10 @@
       </div>
     </div>
   </div>
-  <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="node_modules/handlebars/dist/handlebars.min.js"></script>
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script> 
   <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> 
+  
 </body>
 </html>
