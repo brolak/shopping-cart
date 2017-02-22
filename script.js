@@ -11,7 +11,7 @@ var updateCart = function () {
   var source = $('#cart-template').html();
   var template = Handlebars.compile(source);
   var newHTML = template({
-          cart: cart 
+          cart: cart
         });
   $cartList.append(newHTML);
 }
