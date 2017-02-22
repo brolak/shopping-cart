@@ -34,6 +34,8 @@ var clearCart = function () {
   //empty the shopping cart
   $cartList.empty()
   cart = [];
+  total=0;
+  $(".total").html(total);
 }
 
 $('.view-cart').on('click', function () {
