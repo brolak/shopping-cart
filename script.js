@@ -14,6 +14,11 @@ var updateCart = function () {
           cart: cart
         });
   $cartList.append(newHTML);
+  total = 0;
+  for(i=0;i<cart.length;i++){
+    total+=Number(cart[i].price);
+  }
+  $(".total").html(total);
 }
 
 
@@ -38,6 +43,7 @@ $('.view-cart').on('click', function () {
 
 $('.add-to-cart').on('click', function () {
   //get the "item" object from the page
+  $shoppingCart.toggleClass('show',true);
   newItem = this.closest(".item")
   addItem(newItem);
   updateCart();
