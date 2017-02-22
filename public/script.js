@@ -1,3 +1,5 @@
+var $cartList = $(".cartList");
+
 // an array with all of our cart items
 var cart = [];
 
@@ -14,11 +16,11 @@ var addItem = function (item) {
 }
 
 var clearCart = function () {
-  // TODO: Write a function that clears the cart ;-)
+  $cartList.empty();
 }
 
 $('.view-cart').on('click', function () {
-  // TODO: hide/show the shopping cart!
+  $(".shopping-cart").toggleClass(".show");
 });
 
 $('.add-to-cart').on('click', function () {
