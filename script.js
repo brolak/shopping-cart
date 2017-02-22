@@ -28,6 +28,7 @@ var addItem = function (item) {
 var clearCart = function () {
   //empty the shopping cart
   $cartList.empty()
+  cart = [];
 }
 
 $('.view-cart').on('click', function () {
