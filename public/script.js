@@ -3,6 +3,13 @@ var $cartList = $(".cart-list");
 // an array with all of our cart items
 var cart = [];
 
+/*
+You should not have to touch the html file at all. 
+If you find you want to make changes to it then stop, think and discuss what you are doing with your partner.
+Add a remove button beside each item in the cart and remove that item from the cart when it's clicked. 
+Update the total accordingly.
+Don't allow "duplications" in the cart, but instead tally the number of each item like this:
+*/
 var updateCart = function () {
   // TODO: Write this function. In this function we render the page.
   // Meaning we make sure that all our cart items are displayed in the browser.
@@ -16,7 +23,7 @@ var updateCart = function () {
   $cartList.append(newHTML);
   total = 0;
   for(i=0;i<cart.length;i++){
-    total+=Number(cart[i].price);
+    total+=Number(cart[i].price*cart[i].tally);
   }
   $(".total").html(total);
 }
@@ -24,9 +31,19 @@ var updateCart = function () {
 
 var addItem = function (item) {
   //add items to cart array
+  for(i=0;i<cart.length;i++){
+    if(cart[i].name === item.dataset.name){
+      cart[i].tally += 1;
+      cart[i].totalPrice = cart[i].price*cart[i].tally;
+      return true;
+    }
+
+  }
   cart.push({
     "name": item.dataset.name,
-    "price": item.dataset.price
+    "price": Number(item.dataset.price),
+    "tally": 1,
+    "totalPrice": Number(item.dataset.price)
   })
 }
 
