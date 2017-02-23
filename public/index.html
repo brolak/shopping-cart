@@ -8,9 +8,29 @@
   <title>Shopping Cart!</title>
   <script id="cart-template" type="text/x-handlebars-template">
       {{#each cart}}
-      <p>{{name}} - {{price}}</p>
+      <p>{{name}} ( {{tally}} ) - {{price}}</p>
       {{/each}}
   </script>
+
+  <script id="item-template" type="text/x-handlebars-template">
+
+      <div class="col-md-4">
+        <div class="card-container">
+          <div class="card item" item data-name="{{name}}" data-price="{{price}}">
+            <div class="pricebox">
+              <p class="price"> ${{price}} </p>
+            </div>
+            <div class="buybox">
+              <p class="add-to-cart"> ADD TO CART </p>
+            </div>
+            <div class="card-inner">
+              <img src="{{image}}" class="proimage">
+            </div>
+          </div>
+        </div>
+   
+  </script>
+
 </head>
 <body>
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -53,7 +73,7 @@
     </div>
 
 
-    <div class="row">
+    <div class="row item-page">
       <div class="col-md-4">
         <div class="card-container">
           <div class="card item" item data-name="glass" data-price="68">
@@ -154,10 +174,45 @@
       </div>
     </div>
   </div>
+
+  <div class="container">
+    
+  </div>
+
+  
+</div>
+  <div>
+    <h1>New Item</h1>
+  <form class="add-form">
+        <h3>Add new element to store</h3>
+
+        <div class="form-group">
+          <input type="text"
+            class="item-input form-control"
+           required placeholder="Name of item" >
+          </input>
+        </div>
+        <div class="form-group">
+          <input type="text" class="price-input form-control" required placeholder="Price of Item" >
+          </input>
+        </div>
+        <div class="form-group">
+          <input type="url" name="imgUrl" class="img-input form-control" placeholder="url of the Image" >
+          </input>
+        </div>
+
+        <div>
+    <button type="button" id="addBtn" class="btn btn-secondary">Add new item to store</button>  
+    </div>
+
+    </form>
   <script type="text/javascript" src="/handlebars/dist/handlebars.min.js"></script>
   <script type="text/javascript" src="/jquery/dist/jquery.min.js"></script> 
   <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="addItem.js"></script>
   <script type="text/javascript" src="/bootstrap/dist/js/bootstrap.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
   
 </body>
 </html>
