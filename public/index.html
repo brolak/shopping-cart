@@ -32,6 +32,7 @@
   </script>
 
 </head>
+
 <body>
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
@@ -73,7 +74,7 @@
     </div>
 
 
-    <div class="row item-page">
+    <div class="row">
       <div class="col-md-4">
         <div class="card-container">
           <div class="card item" item data-name="glass" data-price="68">
@@ -124,7 +125,7 @@
 
     
     </div>
-    <div class="row">
+    <div class="row item-page">
       <div class="col-md-4">
         <div class="card-container">
           <div class="card item" item data-name="book" data-price="25">
@@ -177,10 +178,6 @@
 
   <div class="container">
     
-  </div>
-
-  
-</div>
   <div>
     <h1>New Item</h1>
   <form class="add-form">
@@ -189,22 +186,18 @@
         <div class="form-group">
           <input type="text"
             class="item-input form-control"
-           required placeholder="Name of item" >
-          </input>
+           required placeholder="Name of item"/>
         </div>
         <div class="form-group">
-          <input type="text" class="price-input form-control" required placeholder="Price of Item" >
-          </input>
-        </div>
+          <input type="text" class="price-input form-control" required placeholder="Price of Item"/>        
+          </div>
         <div class="form-group">
-          <input type="url" name="imgUrl" class="img-input form-control" placeholder="url of the Image" >
-          </input>
+          <input type="url" name="imgUrl" class="img-input form-control" placeholder="url of the Image"/>
         </div>
 
         <div>
     <button type="button" id="addBtn" class="btn btn-secondary">Add new item to store</button>  
     </div>
-
     </form>
   <script type="text/javascript" src="/handlebars/dist/handlebars.min.js"></script>
   <script type="text/javascript" src="/jquery/dist/jquery.min.js"></script> 

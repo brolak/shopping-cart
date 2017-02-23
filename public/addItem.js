@@ -3,7 +3,6 @@ var itemTemplate = Handlebars.compile(itemSource);
 
 
 var addItemtoPage = function () {
-	debugger;
 	var $itemInput = $('.item-input').val();
 	var $itemPrice = $('.price-input').val();
 	var $imgUrl = $('.img-input').val()

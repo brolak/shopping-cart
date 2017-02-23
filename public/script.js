@@ -21,11 +21,11 @@ var updateCart = function () {
           cart: cart
         });
   $cartList.append(newHTML);
-  total = 0;
+  totalPrice = 0;
   for(i=0;i<cart.length;i++){
-    total+=Number(cart[i].price*cart[i].tally);
+    totalPrice+=Number(cart[i].price*cart[i].tally);
   }
-  $(".total").html(total);
+  $(".total").html(totalPrice);
 }
 
 
