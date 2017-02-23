@@ -60,7 +60,7 @@ $('.view-cart').on('click', function () {
   $shoppingCart.toggleClass('show');
 });
 
-$('.add-to-cart').on('click', function () {
+$('.item-page').on('click', '.add-to-cart', function () {
   //get the "item" object from the page
   $shoppingCart.toggleClass('show',true);
   newItem = this.closest(".item")
